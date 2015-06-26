@@ -13,6 +13,8 @@ javac -cp Library.jar -proc:only *.java
 
 Or you can remove "-proc:only" if you want to have subsequent compilation for generated code.
 
+__Note__ that you shouldn't put that java file under a default(unnamed) package. The file is expected to have a certain package name so that the generated classes can easily import the object algebra interface.
+
 ## Change log
 
 - /Shy/src/com/zewei/annotation/processor/AlgebraProcessor.java: When specifying file paths, "/" works in Eclipse but fails in command line compilation with a FilerException. Now "." is used instead.
